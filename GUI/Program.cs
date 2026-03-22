@@ -17,7 +17,7 @@
             if (login.ShowDialog() == DialogResult.OK)
             {
                 // Mượn tạm frmBase làm giao diện chính cho đơn giản
-                Application.Run(new frmBase());
+                Application.Run(new frmMain());
             }
         }
     }

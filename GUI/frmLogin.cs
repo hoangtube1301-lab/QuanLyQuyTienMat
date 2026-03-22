@@ -37,8 +37,8 @@ namespace GUI
             {
                 // Nếu đúng: Thông báo và mở Form chính
                 MessageBox.Show($"Đăng nhập thành công! Xin chào {loginUser.TenNguoiDung}", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
                 GlobalUser.CurrentUser = loginUser;
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
