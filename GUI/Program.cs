@@ -1,4 +1,4 @@
-namespace GUI
+﻿namespace GUI
 {
     internal static class Program
     {
@@ -8,10 +8,17 @@ namespace GUI
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+            // 1. Mở bảng đăng nhập lên trước
+            frmLogin login = new frmLogin();
+
+            // 2. Nếu bấm Đăng nhập thành công (OK) thì mới mở tiếp
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                // Mượn tạm frmBase làm giao diện chính cho đơn giản
+                Application.Run(new frmBase());
+            }
         }
     }
 }

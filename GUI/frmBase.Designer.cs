@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmBase
+    public partial class frmBase : Form
     {
         /// <summary>
         /// Required designer variable.
