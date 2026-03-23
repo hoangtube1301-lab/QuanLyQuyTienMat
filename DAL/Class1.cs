@@ -20,9 +20,9 @@ public partial class QuanLyTienMatContext : DbContext
     public virtual DbSet<VaiTro> VaiTros { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=.;Database=QuanLyTienMat;Trusted_Connection=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS03;Database=QuanLyTienMat;Trusted_Connection=True;TrustServerCertificate=True");
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<GiaoDich>(entity =>
         {
