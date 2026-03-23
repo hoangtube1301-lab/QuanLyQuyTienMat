@@ -87,6 +87,47 @@ public partial class QuanLyTienMatContext : DbContext
             entity.Property(e => e.VaiTroId).HasColumnName("VaiTroID");
             entity.Property(e => e.TenVaiTro).HasMaxLength(50);
         });
+        // 1. Dữ liệu VaiTro
+        modelBuilder.Entity<VaiTro>().HasData(
+            new { VaiTroId = 1, TenVaiTro = "Admin" },
+            new { VaiTroId = 2, TenVaiTro = "Kế toán" }
+        );
+
+        // 2. Tài khoản mẫu (Sửa Username -> TenNguoiDung, Password -> MatKhau)
+        modelBuilder.Entity<NguoiDung>().HasData(
+            new
+            {
+                NguoiDungId = 1,
+                TenNguoiDung = "admin",
+                MatKhau = "202CB962AC59075B964B07152D234B70",
+                VaiTroId = 1
+            }
+        );
+
+        // 3. Tạo các giao dịch mẫu
+        modelBuilder.Entity<GiaoDich>().HasData(
+            new
+            {
+                GiaoDichId = 1,
+                SoCt = "PT001",
+                NgayCt = new DateTime(2026, 3, 1),
+                DienGiai = "Thu tiền bán hàng tháng 2",
+                SoTien = 10000000m,
+                LoaiGiaoDich = (byte)1, // 1 là Thu (Receipt)
+                TenDoiTuong = "Công ty ABC"
+            },
+            new
+            {
+                GiaoDichId = 2,
+                SoCt = "PC002",
+                NgayCt = new DateTime(2026, 3, 5),
+                DienGiai = "Chi tiền điện nước văn phòng",
+                SoTien = 2500000m,
+                LoaiGiaoDich = (byte)0, // 0 là Chi (Payment)
+                TenDoiTuong = "Điện lực Hà Nội"
+            }
+        );
+
 
         OnModelCreatingPartial(modelBuilder);
     }

@@ -9,6 +9,7 @@
         static void Main()
         {
             ApplicationConfiguration.Initialize();
+            Application.Run(new frmBaoCao());
 
             // 1. Mở bảng đăng nhập lên trước
             frmLogin login = new frmLogin();
