@@ -9,7 +9,7 @@ namespace DAL
         private QuanLyTienMatContext GetContext()
         {
             var optionsBuilder = new DbContextOptionsBuilder<QuanLyTienMatContext>();
-            optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS03;Database=QuanLyTienMat;Trusted_Connection=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer(@"Server=localhost; Database=QuanLyTienMat; Integrated Security=True; TrustServerCertificate=True;");
 
             return new QuanLyTienMatContext(optionsBuilder.Options);
         }

@@ -12,7 +12,7 @@ namespace GUI
             // see https://aka.ms/applicationconfiguration.
             Application.SetHighDpiMode(HighDpiMode.DpiUnaware);
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmSoGiaoDich());
+            Application.Run(new frmBaoCao());
         }
     }
 }

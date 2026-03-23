@@ -22,7 +22,7 @@ public partial class QuanLyTienMatContext : DbContext
     public virtual DbSet<VaiTro> VaiTros { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    => optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS03;Database=QuanLyTienMat;Trusted_Connection=True;TrustServerCertificate=True");
+    => optionsBuilder.UseSqlServer(@"Server=localhost; Database=QuanLyTienMat; Integrated Security=True; TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
