@@ -30,7 +30,7 @@
         {
             menuStrip1 = new MenuStrip();
             hệThốngToolStripMenuItem = new ToolStripMenuItem();
-            đổiMậtKhẩuToolStripMenuItem = new ToolStripMenuItem();
+            menuQuanLyNguoiDung = new ToolStripMenuItem();
             đăngXuấtToolStripMenuItem = new ToolStripMenuItem();
             nghiệpVụToolStripMenuItem = new ToolStripMenuItem();
             thuTiềnToolStripMenuItem = new ToolStripMenuItem();
@@ -39,7 +39,6 @@
             traCứuToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             lblUserStatus = new ToolStripStatusLabel();
-            quảnLýNgườiDùngToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
@@ -56,21 +55,22 @@
             // 
             // hệThốngToolStripMenuItem
             // 
-            hệThốngToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { đổiMậtKhẩuToolStripMenuItem, đăngXuấtToolStripMenuItem, quảnLýNgườiDùngToolStripMenuItem });
+            hệThốngToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { menuQuanLyNguoiDung, đăngXuấtToolStripMenuItem });
             hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             hệThốngToolStripMenuItem.Size = new Size(89, 24);
             hệThốngToolStripMenuItem.Text = "Hệ thống ";
             // 
-            // đổiMậtKhẩuToolStripMenuItem
+            // menuQuanLyNguoiDung
             // 
-            đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            đổiMậtKhẩuToolStripMenuItem.Size = new Size(224, 26);
-            đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu ";
+            menuQuanLyNguoiDung.Name = "menuQuanLyNguoiDung";
+            menuQuanLyNguoiDung.Size = new Size(223, 26);
+            menuQuanLyNguoiDung.Text = "Quản lý người dùng";
+            menuQuanLyNguoiDung.Click += menuQuanLyNguoiDung_Click;
             // 
             // đăngXuấtToolStripMenuItem
             // 
             đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            đăngXuấtToolStripMenuItem.Size = new Size(224, 26);
+            đăngXuấtToolStripMenuItem.Size = new Size(223, 26);
             đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             đăngXuấtToolStripMenuItem.Click += đăngXuấtToolStripMenuItem_Click;
             // 
@@ -84,14 +84,14 @@
             // thuTiềnToolStripMenuItem
             // 
             thuTiềnToolStripMenuItem.Name = "thuTiềnToolStripMenuItem";
-            thuTiềnToolStripMenuItem.Size = new Size(224, 26);
+            thuTiềnToolStripMenuItem.Size = new Size(149, 26);
             thuTiềnToolStripMenuItem.Text = "Thu tiền ";
             thuTiềnToolStripMenuItem.Click += thuTiềnToolStripMenuItem_Click;
             // 
             // chiTiềnToolStripMenuItem
             // 
             chiTiềnToolStripMenuItem.Name = "chiTiềnToolStripMenuItem";
-            chiTiềnToolStripMenuItem.Size = new Size(224, 26);
+            chiTiềnToolStripMenuItem.Size = new Size(149, 26);
             chiTiềnToolStripMenuItem.Text = "Chi tiền ";
             chiTiềnToolStripMenuItem.Click += chiTiềnToolStripMenuItem_Click;
             // 
@@ -125,12 +125,6 @@
             lblUserStatus.Size = new Size(151, 20);
             lblUserStatus.Text = "toolStripStatusLabel1";
             // 
-            // quảnLýNgườiDùngToolStripMenuItem
-            // 
-            quảnLýNgườiDùngToolStripMenuItem.Name = "quảnLýNgườiDùngToolStripMenuItem";
-            quảnLýNgườiDùngToolStripMenuItem.Size = new Size(224, 26);
-            quảnLýNgườiDùngToolStripMenuItem.Text = "Quản lý người dùng";
-            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
@@ -140,6 +134,7 @@
             ClientSize = new Size(791, 394);
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
+            IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "frmMain";
             Text = "";
@@ -156,7 +151,6 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem hệThốngToolStripMenuItem;
-        private ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private ToolStripMenuItem nghiệpVụToolStripMenuItem;
         private ToolStripMenuItem thuTiềnToolStripMenuItem;
@@ -165,6 +159,6 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel lblUserStatus;
         private ToolStripMenuItem traCứuToolStripMenuItem;
-        private ToolStripMenuItem quảnLýNgườiDùngToolStripMenuItem;
+        private ToolStripMenuItem menuQuanLyNguoiDung;
     }
 }

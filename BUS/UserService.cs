@@ -25,5 +25,28 @@ namespace BUS
 
             return null; // Sai mật khẩu
         }
+        public List<NguoiDung> GetAllUsers()
+        {
+            return _userDAL.GetAll();
+        }
+
+        public bool CreateUser(NguoiDung user)
+        {
+            // Kiểm tra logic: Nếu trùng tên đăng nhập thì không cho thêm
+            if (_userDAL.GetByUsername(user.TenNguoiDung) != null) return false;
+            return _userDAL.Add(user);
+        }
+
+        public bool RemoveUser(string username)
+        {
+            return _userDAL.Delete(username);
+        }
+        public bool UpdateUser(NguoiDung user)
+        {
+            // Có thể thêm logic kiểm tra mật khẩu không được để trống ở đây
+            if (string.IsNullOrEmpty(user.MatKhau)) return false;
+
+            return _userDAL.Update(user);
+        }
     }
 }

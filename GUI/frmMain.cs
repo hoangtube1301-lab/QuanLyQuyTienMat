@@ -35,6 +35,21 @@ namespace GUI
                     menuQuanLyNguoiDung.Visible = false; // Không phải admin thì ẩn đi
                 }
             }
+            // Duyệt tìm thành phần MdiClient (vùng màu xám)
+            foreach (Control ctl in this.Controls)
+            {
+                if (ctl is MdiClient mdi)
+                {
+                    // 1. Gán lại ảnh nền cho vùng xám này
+                    // Chọn đúng ảnh bạn đã dùng làm Background cho Form
+                    mdi.BackgroundImage = this.BackgroundImage;
+
+                    // 2. Chỉnh cách hiển thị ảnh (Stretch để phủ kín)
+                    mdi.BackgroundImageLayout = ImageLayout.Stretch;
+
+                    break;
+                }
+            }
         }
 
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,8 +77,27 @@ namespace GUI
 
         private void chiTiềnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPhieuChi c=new frmPhieuChi();
+            frmPhieuChi c = new frmPhieuChi();
             c.ShowDialog();
+        }
+
+        private void menuQuanLyNguoiDung_Click(object sender, EventArgs e)
+        {
+            // Tìm xem form này đã mở chưa
+            Form frm = Application.OpenForms["frmQuanLyNguoiDung"];
+
+            if (frm == null)
+            {
+                // Nếu chưa mở thì tạo mới
+                frmQuanLyNguoiDung f = new frmQuanLyNguoiDung();
+                f.MdiParent = this; // Dòng này sẽ hết lỗi sau khi thực hiện Bước 1
+                f.Show();
+            }
+            else
+            {
+                // Nếu mở rồi thì hiển thị nó lên
+                frm.Activate();
+            }
         }
     }
 }
