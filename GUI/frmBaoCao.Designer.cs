@@ -86,7 +86,7 @@
             // 
             lblTonQuy.AutoSize = true;
             lblTonQuy.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTonQuy.ForeColor = SystemColors.HotTrack;
+            lblTonQuy.ForeColor = Color.FromArgb(0, 0, 192);
             lblTonQuy.Location = new Point(755, 307);
             lblTonQuy.Name = "lblTonQuy";
             lblTonQuy.Size = new Size(137, 23);
@@ -113,17 +113,20 @@
             // 
             // dgvBaoCao
             // 
+            dgvBaoCao.BackgroundColor = Color.FromArgb(255, 192, 128);
             dgvBaoCao.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBaoCao.Location = new Point(8, 34);
+            dgvBaoCao.Location = new Point(50, 41);
             dgvBaoCao.Name = "dgvBaoCao";
             dgvBaoCao.RowHeadersWidth = 51;
-            dgvBaoCao.Size = new Size(633, 419);
+            dgvBaoCao.Size = new Size(596, 394);
             dgvBaoCao.TabIndex = 5;
             // 
             // frmBaoCao
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1031, 486);
             Controls.Add(dgvBaoCao);
             Controls.Add(lblTongThu);

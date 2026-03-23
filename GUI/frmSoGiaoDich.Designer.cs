@@ -59,7 +59,7 @@
             grbDieuKienTraCuu.Controls.Add(labTuNgay);
             grbDieuKienTraCuu.Controls.Add(dptDenNgay);
             grbDieuKienTraCuu.Controls.Add(dptTuNgay);
-            grbDieuKienTraCuu.Location = new Point(127, 44);
+            grbDieuKienTraCuu.Location = new Point(183, 48);
             grbDieuKienTraCuu.Name = "grbDieuKienTraCuu";
             grbDieuKienTraCuu.Size = new Size(802, 175);
             grbDieuKienTraCuu.TabIndex = 0;
@@ -80,7 +80,7 @@
             // 
             txtTimKiem.Location = new Point(551, 84);
             txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.Size = new Size(167, 34);
+            txtTimKiem.Size = new Size(167, 30);
             txtTimKiem.TabIndex = 2;
             // 
             // labDenNgay
@@ -89,7 +89,7 @@
             labDenNgay.ImeMode = ImeMode.NoControl;
             labDenNgay.Location = new Point(20, 84);
             labDenNgay.Name = "labDenNgay";
-            labDenNgay.Size = new Size(99, 28);
+            labDenNgay.Size = new Size(87, 23);
             labDenNgay.TabIndex = 1;
             labDenNgay.Text = "Đến ngày:";
             labDenNgay.Click += labDenNgay_Click;
@@ -100,7 +100,7 @@
             label1.ImeMode = ImeMode.NoControl;
             label1.Location = new Point(564, 38);
             label1.Name = "label1";
-            label1.Size = new Size(142, 28);
+            label1.Size = new Size(125, 23);
             label1.TabIndex = 1;
             label1.Text = "Tìm kiếm chứa:";
             label1.Click += label1_Click;
@@ -110,7 +110,7 @@
             labTuNgay.AutoSize = true;
             labTuNgay.Location = new Point(33, 39);
             labTuNgay.Name = "labTuNgay";
-            labTuNgay.Size = new Size(86, 28);
+            labTuNgay.Size = new Size(75, 23);
             labTuNgay.TabIndex = 1;
             labTuNgay.Text = "Từ ngày:";
             // 
@@ -119,7 +119,7 @@
             dptDenNgay.Format = DateTimePickerFormat.Short;
             dptDenNgay.Location = new Point(135, 84);
             dptDenNgay.Name = "dptDenNgay";
-            dptDenNgay.Size = new Size(165, 34);
+            dptDenNgay.Size = new Size(165, 30);
             dptDenNgay.TabIndex = 0;
             dptDenNgay.ValueChanged += dptDenNgay_ValueChanged;
             // 
@@ -128,7 +128,7 @@
             dptTuNgay.Format = DateTimePickerFormat.Short;
             dptTuNgay.Location = new Point(135, 38);
             dptTuNgay.Name = "dptTuNgay";
-            dptTuNgay.Size = new Size(167, 34);
+            dptTuNgay.Size = new Size(167, 30);
             dptTuNgay.TabIndex = 0;
             // 
             // dgvSoGiaoDich
@@ -137,7 +137,7 @@
             dgvSoGiaoDich.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSoGiaoDich.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSoGiaoDich.Columns.AddRange(new DataGridViewColumn[] { colNgay, colSoHieu, colDienGiai, colSoTienThu, colSoTienChi, colTonQuy });
-            dgvSoGiaoDich.Location = new Point(88, 283);
+            dgvSoGiaoDich.Location = new Point(144, 287);
             dgvSoGiaoDich.Name = "dgvSoGiaoDich";
             dgvSoGiaoDich.RowHeadersWidth = 62;
             dgvSoGiaoDich.Size = new Size(880, 260);
@@ -198,6 +198,8 @@
             AcceptButton = btnTraCuu;
             AccessibleRole = AccessibleRole.None;
             AutoScaleMode = AutoScaleMode.None;
+            BackgroundImage = Properties.Resources.background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1172, 708);
             Controls.Add(dgvSoGiaoDich);
             Controls.Add(grbDieuKienTraCuu);

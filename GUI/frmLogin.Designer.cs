@@ -37,14 +37,14 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(266, 123);
+            txtUsername.Location = new Point(366, 134);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(229, 30);
             txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(266, 212);
+            txtPassword.Location = new Point(366, 223);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(229, 30);
@@ -54,7 +54,7 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(308, 319);
+            btnLogin.Location = new Point(408, 330);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(142, 56);
             btnLogin.TabIndex = 2;
@@ -65,7 +65,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(98, 130);
+            label1.Location = new Point(198, 141);
             label1.Name = "label1";
             label1.Size = new Size(124, 23);
             label1.TabIndex = 3;
@@ -74,7 +74,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(140, 219);
+            label2.Location = new Point(240, 230);
             label2.Name = "label2";
             label2.Size = new Size(82, 23);
             label2.TabIndex = 3;
@@ -84,6 +84,8 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(900, 518);
             Controls.Add(label2);
             Controls.Add(label1);

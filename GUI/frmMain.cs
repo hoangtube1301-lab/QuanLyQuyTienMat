@@ -26,7 +26,7 @@ namespace GUI
                 lblUserStatus.Text = $"Người dùng: {user.TenNguoiDung} | Quyền: {user.VaiTro?.TenVaiTro}";
 
                 // 2. Phân quyền: Giả sử ID 1 là Admin, ID 2 là Nhân viên
-                if (user.VaiTroId != 1)
+                if (user.VaiTroId == 1)
                 {
                     menuQuanLyNguoiDung.Visible = true; // Admin thì cho hiện
                 }
@@ -40,6 +40,30 @@ namespace GUI
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void traCứuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSoGiaoDich f = new frmSoGiaoDich();
+            f.ShowDialog();
+        }
+
+        private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaoCao bc = new frmBaoCao();
+            bc.ShowDialog();
+        }
+
+        private void thuTiềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPhieuThu t = new frmPhieuThu();
+            t.ShowDialog();
+        }
+
+        private void chiTiềnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPhieuChi c=new frmPhieuChi();
+            c.ShowDialog();
         }
     }
 }

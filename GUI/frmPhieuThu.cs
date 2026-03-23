@@ -98,7 +98,7 @@ namespace GUI
 
                     // Quy tắc Check Constraint: 1 là Thu, 0 là Chi
                     // Nếu bạn đang ở Form Phiếu Thu thì để là 1, Phiếu Chi để là 0
-                    LoaiGiaoDich = 0
+                    LoaiGiaoDich = 1
                 };
 
                 // 4. Gọi xuống lớp BUS để thực hiện lệnh INSERT vào SQL Server

@@ -40,8 +40,9 @@ namespace GUI
         private void btnTraCuu_Click(object sender, EventArgs e)
         {
             // 1. Lấy dữ liệu từ các ô bạn đã kéo thả
-            DateTime tuNgay = dptTuNgay.Value;
-            DateTime denNgay = dptDenNgay.Value;
+            DateTime tuNgay = dptTuNgay.Value.Date;
+            DateTime denNgay = dptDenNgay.Value.AddDays(1);
+          
             string tuKhoa = txtTimKiem.Text;
 
             // 2. Gọi hàm "LaySoQuy" thần thánh ở lớp BUS mà bạn vừa tạo

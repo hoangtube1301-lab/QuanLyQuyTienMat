@@ -18,23 +18,22 @@ namespace GUI
         // Khai báo lớp BUS ở đầu class
         BUS.GiaoDichBUS bus = new BUS.GiaoDichBUS();
 
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            // 1. Lấy ngày từ giao diện
-            DateTime tu = dtpTuNgay.Value.Date;
-            DateTime den = dtpDenNgay.Value.Date;
 
-            // 2. Lấy dữ liệu từ BUS
+            private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            // 1. Lấy ngày thực tế (bao gồm cả ngày hôm nay)
+            DateTime tu = dtpTuNgay.Value.Date;
+            DateTime den = dtpDenNgay.Value.Date.AddDays(1);
+            // 2. Gọi BUS lấy data
             DataTable dt = bus.LayBangBaoCao(tu, den);
 
-            // 3. Hiển thị lên bảng DataGridView
+            // 3. Cập nhật giao diện - Dòng này là then chốt để thấy sự thay đổi
+            dgvBaoCao.DataSource = null;
             dgvBaoCao.DataSource = dt;
 
-            // 4. Tính toán số tiền
+            // 4. Tính toán lại các label
             decimal thu, chi;
             bus.TinhToanSoDu(dt, out thu, out chi);
-
-            // 5. Hiển thị lên Label (Sử dụng Helper bạn đã làm)
             lblTongThu.Text = "Tổng thu: " + BUS.CurrencyHelper.FormatVND(thu);
             lblTongChi.Text = "Tổng chi: " + BUS.CurrencyHelper.FormatVND(chi);
             lblTonQuy.Text = "Tồn quỹ: " + BUS.CurrencyHelper.FormatVND(thu - chi);
