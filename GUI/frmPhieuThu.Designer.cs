@@ -345,6 +345,7 @@
             button2.TabIndex = 69;
             button2.Text = "Hủy";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -358,6 +359,7 @@
             button1.Text = "Lưu";
             button1.TextImageRelation = TextImageRelation.TextBeforeImage;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // frmPhieuThu
             // 
