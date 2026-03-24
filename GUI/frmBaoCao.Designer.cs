@@ -43,38 +43,43 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(666, 76);
+            label1.BackColor = SystemColors.ButtonHighlight;
+            label1.Location = new Point(37, 26);
             label1.Name = "label1";
-            label1.Size = new Size(71, 23);
+            label1.Size = new Size(75, 23);
             label1.TabIndex = 0;
-            label1.Text = "Từ ngày";
+            label1.Text = "Từ ngày:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(666, 125);
+            label2.BackColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(25, 67);
             label2.Name = "label2";
-            label2.Size = new Size(83, 23);
+            label2.Size = new Size(87, 23);
             label2.TabIndex = 0;
-            label2.Text = "Đến ngày";
+            label2.Text = "Đến ngày:";
             // 
             // dtpTuNgay
             // 
-            dtpTuNgay.Location = new Point(755, 70);
+            dtpTuNgay.Cursor = Cursors.Hand;
+            dtpTuNgay.Location = new Point(118, 20);
             dtpTuNgay.Name = "dtpTuNgay";
             dtpTuNgay.Size = new Size(250, 30);
             dtpTuNgay.TabIndex = 1;
             // 
             // dtpDenNgay
             // 
-            dtpDenNgay.Location = new Point(755, 119);
+            dtpDenNgay.Cursor = Cursors.Hand;
+            dtpDenNgay.Location = new Point(118, 61);
             dtpDenNgay.Name = "dtpDenNgay";
             dtpDenNgay.Size = new Size(250, 30);
             dtpDenNgay.TabIndex = 1;
             // 
             // btnThongKe
             // 
-            btnThongKe.Location = new Point(727, 180);
+            btnThongKe.Cursor = Cursors.Hand;
+            btnThongKe.Location = new Point(148, 102);
             btnThongKe.Name = "btnThongKe";
             btnThongKe.Size = new Size(191, 29);
             btnThongKe.TabIndex = 3;
@@ -85,9 +90,10 @@
             // lblTonQuy
             // 
             lblTonQuy.AutoSize = true;
+            lblTonQuy.BackColor = SystemColors.ButtonHighlight;
             lblTonQuy.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTonQuy.ForeColor = Color.FromArgb(0, 0, 192);
-            lblTonQuy.Location = new Point(755, 307);
+            lblTonQuy.Location = new Point(388, 454);
             lblTonQuy.Name = "lblTonQuy";
             lblTonQuy.Size = new Size(137, 23);
             lblTonQuy.TabIndex = 4;
@@ -105,7 +111,8 @@
             // lblTongThu
             // 
             lblTongThu.AutoSize = true;
-            lblTongThu.Location = new Point(755, 275);
+            lblTongThu.BackColor = SystemColors.ButtonHighlight;
+            lblTongThu.Location = new Point(388, 422);
             lblTongThu.Name = "lblTongThu";
             lblTongThu.Size = new Size(139, 23);
             lblTongThu.TabIndex = 4;
@@ -113,20 +120,22 @@
             // 
             // dgvBaoCao
             // 
-            dgvBaoCao.BackgroundColor = Color.FromArgb(255, 192, 128);
+            dgvBaoCao.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvBaoCao.BackgroundColor = Color.White;
+            dgvBaoCao.BorderStyle = BorderStyle.Fixed3D;
             dgvBaoCao.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBaoCao.Location = new Point(50, 41);
+            dgvBaoCao.Location = new Point(0, 147);
             dgvBaoCao.Name = "dgvBaoCao";
             dgvBaoCao.RowHeadersWidth = 51;
-            dgvBaoCao.Size = new Size(596, 394);
+            dgvBaoCao.Size = new Size(1031, 260);
             dgvBaoCao.TabIndex = 5;
+            dgvBaoCao.CellContentClick += dgvBaoCao_CellContentClick;
             // 
             // frmBaoCao
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.background;
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackgroundImage = Properties.Resources.bao_cao;
             ClientSize = new Size(1031, 486);
             Controls.Add(dgvBaoCao);
             Controls.Add(lblTongThu);

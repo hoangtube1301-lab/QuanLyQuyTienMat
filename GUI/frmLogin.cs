@@ -14,6 +14,10 @@ namespace GUI
         public frmLogin()
         {
             InitializeComponent();
+
+            // Ép nút đăng nhập hiện hình bàn tay, kể cả khi Designer bị lỗi
+            btnLogin.Cursor = Cursors.Hand;
+            btnLogin.UseWaitCursor = false;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -49,6 +53,11 @@ namespace GUI
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

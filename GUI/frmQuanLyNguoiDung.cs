@@ -17,7 +17,16 @@ namespace GUI
         public frmQuanLyNguoiDung()
         {
             InitializeComponent();
-            LoadGrid(); // 3. Gọi hàm load dữ liệu khi mở Form
+
+            // 1. ÉP FORM TO HẾT CỠ ĐỂ PHỦ KÍN FORM MAIN
+            this.WindowState = FormWindowState.Maximized;
+
+            // 2. MẤT VIỀN CỬA SỔ
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Dock = DockStyle.Fill;
+
+            // 3. GỌI HÀM LOAD DỮ LIỆU
+            LoadGrid();
         }
 
         // 4. THÊM HÀM NÀY: Để đổ dữ liệu vào DataGridView
@@ -133,6 +142,16 @@ namespace GUI
 
             // 5. Đưa con trỏ chuột về ô Tài khoản để người dùng nhập ngay
             txtTenDangNhap.Focus();
+        }
+
+        private void cboVaiTro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmQuanLyNguoiDung_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

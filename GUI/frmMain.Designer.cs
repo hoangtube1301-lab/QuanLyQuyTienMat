@@ -49,7 +49,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { hệThốngToolStripMenuItem, nghiệpVụToolStripMenuItem, báoCáoToolStripMenuItem, traCứuToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(791, 28);
+            menuStrip1.Size = new Size(752, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -113,9 +113,9 @@
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { lblUserStatus });
-            statusStrip1.Location = new Point(0, 368);
+            statusStrip1.Location = new Point(0, 441);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(791, 26);
+            statusStrip1.Size = new Size(752, 26);
             statusStrip1.TabIndex = 1;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -130,8 +130,7 @@
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.background;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(791, 394);
+            ClientSize = new Size(752, 467);
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
             IsMdiContainer = true;

@@ -37,14 +37,20 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(366, 134);
+            txtUsername.Anchor = AnchorStyles.None;
+            txtUsername.BorderStyle = BorderStyle.FixedSingle;
+            txtUsername.Cursor = Cursors.IBeam;
+            txtUsername.Location = new Point(367, 228);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(229, 30);
             txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(366, 223);
+            txtPassword.Anchor = AnchorStyles.None;
+            txtPassword.BorderStyle = BorderStyle.FixedSingle;
+            txtPassword.Cursor = Cursors.IBeam;
+            txtPassword.Location = new Point(367, 275);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(229, 30);
@@ -54,38 +60,51 @@
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(408, 330);
+            btnLogin.Anchor = AnchorStyles.None;
+            btnLogin.BackColor = Color.Honeydew;
+            btnLogin.BackgroundImageLayout = ImageLayout.Stretch;
+            btnLogin.Cursor = Cursors.Hand;
+            btnLogin.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.ForestGreen;
+            btnLogin.Location = new Point(378, 353);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(142, 56);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "Đăng nhập";
-            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.UseMnemonic = false;
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.UseWaitCursor = true;
             btnLogin.Click += btnLogin_Click;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(198, 141);
+            label1.BackColor = SystemColors.ButtonHighlight;
+            label1.ForeColor = SystemColors.ControlText;
+            label1.Location = new Point(233, 230);
             label1.Name = "label1";
-            label1.Size = new Size(124, 23);
+            label1.Size = new Size(128, 23);
             label1.TabIndex = 3;
-            label1.Text = "Tên đăng nhập";
+            label1.Text = "Tên đăng nhập:";
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
-            label2.Location = new Point(240, 230);
+            label2.BackColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(275, 277);
             label2.Name = "label2";
-            label2.Size = new Size(82, 23);
+            label2.Size = new Size(86, 23);
             label2.TabIndex = 3;
-            label2.Text = "Mật khẩu";
+            label2.Text = "Mật khẩu:";
+            label2.Click += label2_Click;
             // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.background;
-            BackgroundImageLayout = ImageLayout.Stretch;
+            BackgroundImage = Properties.Resources.Green_and_White_Illustrative_Finance_Presentation;
             ClientSize = new Size(900, 518);
             Controls.Add(label2);
             Controls.Add(label1);

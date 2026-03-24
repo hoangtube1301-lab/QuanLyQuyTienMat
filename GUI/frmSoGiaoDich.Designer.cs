@@ -52,6 +52,8 @@
             // 
             // grbDieuKienTraCuu
             // 
+            grbDieuKienTraCuu.Anchor = AnchorStyles.None;
+            grbDieuKienTraCuu.BackColor = SystemColors.ButtonHighlight;
             grbDieuKienTraCuu.Controls.Add(btnTraCuu);
             grbDieuKienTraCuu.Controls.Add(txtTimKiem);
             grbDieuKienTraCuu.Controls.Add(labDenNgay);
@@ -59,15 +61,16 @@
             grbDieuKienTraCuu.Controls.Add(labTuNgay);
             grbDieuKienTraCuu.Controls.Add(dptDenNgay);
             grbDieuKienTraCuu.Controls.Add(dptTuNgay);
-            grbDieuKienTraCuu.Location = new Point(183, 48);
+            grbDieuKienTraCuu.Location = new Point(235, 227);
             grbDieuKienTraCuu.Name = "grbDieuKienTraCuu";
-            grbDieuKienTraCuu.Size = new Size(802, 175);
+            grbDieuKienTraCuu.Size = new Size(726, 175);
             grbDieuKienTraCuu.TabIndex = 0;
             grbDieuKienTraCuu.TabStop = false;
             grbDieuKienTraCuu.Text = "Điều kiện tra cứu";
             // 
             // btnTraCuu
             // 
+            btnTraCuu.Cursor = Cursors.Hand;
             btnTraCuu.Location = new Point(322, 124);
             btnTraCuu.Name = "btnTraCuu";
             btnTraCuu.Size = new Size(167, 34);
@@ -78,7 +81,8 @@
             // 
             // txtTimKiem
             // 
-            txtTimKiem.Location = new Point(551, 84);
+            txtTimKiem.Cursor = Cursors.IBeam;
+            txtTimKiem.Location = new Point(532, 84);
             txtTimKiem.Name = "txtTimKiem";
             txtTimKiem.Size = new Size(167, 30);
             txtTimKiem.TabIndex = 2;
@@ -87,7 +91,7 @@
             // 
             labDenNgay.AutoSize = true;
             labDenNgay.ImeMode = ImeMode.NoControl;
-            labDenNgay.Location = new Point(20, 84);
+            labDenNgay.Location = new Point(22, 87);
             labDenNgay.Name = "labDenNgay";
             labDenNgay.Size = new Size(87, 23);
             labDenNgay.TabIndex = 1;
@@ -98,7 +102,7 @@
             // 
             label1.AutoSize = true;
             label1.ImeMode = ImeMode.NoControl;
-            label1.Location = new Point(564, 38);
+            label1.Location = new Point(532, 58);
             label1.Name = "label1";
             label1.Size = new Size(125, 23);
             label1.TabIndex = 1;
@@ -108,7 +112,7 @@
             // labTuNgay
             // 
             labTuNgay.AutoSize = true;
-            labTuNgay.Location = new Point(33, 39);
+            labTuNgay.Location = new Point(34, 44);
             labTuNgay.Name = "labTuNgay";
             labTuNgay.Size = new Size(75, 23);
             labTuNgay.TabIndex = 1;
@@ -116,8 +120,9 @@
             // 
             // dptDenNgay
             // 
+            dptDenNgay.Cursor = Cursors.Hand;
             dptDenNgay.Format = DateTimePickerFormat.Short;
-            dptDenNgay.Location = new Point(135, 84);
+            dptDenNgay.Location = new Point(115, 84);
             dptDenNgay.Name = "dptDenNgay";
             dptDenNgay.Size = new Size(165, 30);
             dptDenNgay.TabIndex = 0;
@@ -125,8 +130,9 @@
             // 
             // dptTuNgay
             // 
+            dptTuNgay.Cursor = Cursors.Hand;
             dptTuNgay.Format = DateTimePickerFormat.Short;
-            dptTuNgay.Location = new Point(135, 38);
+            dptTuNgay.Location = new Point(115, 38);
             dptTuNgay.Name = "dptTuNgay";
             dptTuNgay.Size = new Size(167, 30);
             dptTuNgay.TabIndex = 0;
@@ -135,12 +141,14 @@
             // 
             dgvSoGiaoDich.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvSoGiaoDich.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvSoGiaoDich.BackgroundColor = SystemColors.MenuBar;
             dgvSoGiaoDich.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSoGiaoDich.Columns.AddRange(new DataGridViewColumn[] { colNgay, colSoHieu, colDienGiai, colSoTienThu, colSoTienChi, colTonQuy });
-            dgvSoGiaoDich.Location = new Point(144, 287);
+            dgvSoGiaoDich.GridColor = Color.ForestGreen;
+            dgvSoGiaoDich.Location = new Point(170, 426);
             dgvSoGiaoDich.Name = "dgvSoGiaoDich";
             dgvSoGiaoDich.RowHeadersWidth = 62;
-            dgvSoGiaoDich.Size = new Size(880, 260);
+            dgvSoGiaoDich.Size = new Size(866, 260);
             dgvSoGiaoDich.TabIndex = 1;
             dgvSoGiaoDich.CellContentClick += dgvSoGiaoDich_CellContentClick;
             // 
@@ -198,12 +206,12 @@
             AcceptButton = btnTraCuu;
             AccessibleRole = AccessibleRole.None;
             AutoScaleMode = AutoScaleMode.None;
-            BackgroundImage = Properties.Resources.background;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1172, 708);
+            BackgroundImage = Properties.Resources.tracuu1;
+            ClientSize = new Size(1158, 708);
             Controls.Add(dgvSoGiaoDich);
             Controls.Add(grbDieuKienTraCuu);
             Name = "frmSoGiaoDich";
+            ShowIcon = false;
             Text = "Sổ Quỹ Tiền Mặt";
             Load += frmSoGiaoDich_Load;
             grbDieuKienTraCuu.ResumeLayout(false);

@@ -19,7 +19,7 @@ namespace GUI
         BUS.GiaoDichBUS bus = new BUS.GiaoDichBUS();
 
 
-            private void btnThongKe_Click(object sender, EventArgs e)
+        private void btnThongKe_Click(object sender, EventArgs e)
         {
             // 1. Lấy ngày thực tế (bao gồm cả ngày hôm nay)
             DateTime tu = dtpTuNgay.Value.Date;
@@ -37,6 +37,16 @@ namespace GUI
             lblTongThu.Text = "Tổng thu: " + BUS.CurrencyHelper.FormatVND(thu);
             lblTongChi.Text = "Tổng chi: " + BUS.CurrencyHelper.FormatVND(chi);
             lblTonQuy.Text = "Tồn quỹ: " + BUS.CurrencyHelper.FormatVND(thu - chi);
+        }
+
+        private void dgvBaoCao_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

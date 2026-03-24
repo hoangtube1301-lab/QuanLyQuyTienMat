@@ -13,6 +13,7 @@ namespace GUI
         public frmMain()
         {
             InitializeComponent();
+            this.Resize += (s, e) => { this.Refresh(); };
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -40,13 +41,9 @@ namespace GUI
             {
                 if (ctl is MdiClient mdi)
                 {
-                    // 1. Gán lại ảnh nền cho vùng xám này
-                    // Chọn đúng ảnh bạn đã dùng làm Background cho Form
                     mdi.BackgroundImage = this.BackgroundImage;
 
-                    // 2. Chỉnh cách hiển thị ảnh (Stretch để phủ kín)
                     mdi.BackgroundImageLayout = ImageLayout.Stretch;
-
                     break;
                 }
             }
