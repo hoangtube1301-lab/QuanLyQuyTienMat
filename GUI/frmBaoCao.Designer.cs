@@ -93,7 +93,7 @@
             lblTonQuy.BackColor = SystemColors.ButtonHighlight;
             lblTonQuy.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTonQuy.ForeColor = Color.FromArgb(0, 0, 192);
-            lblTonQuy.Location = new Point(388, 454);
+            lblTonQuy.Location = new Point(393, 448);
             lblTonQuy.Name = "lblTonQuy";
             lblTonQuy.Size = new Size(137, 23);
             lblTonQuy.TabIndex = 4;
@@ -102,7 +102,8 @@
             // lblTongChi
             // 
             lblTongChi.AutoSize = true;
-            lblTongChi.Location = new Point(755, 242);
+            lblTongChi.BackColor = SystemColors.ButtonHighlight;
+            lblTongChi.Location = new Point(393, 402);
             lblTongChi.Name = "lblTongChi";
             lblTongChi.Size = new Size(135, 23);
             lblTongChi.TabIndex = 4;
@@ -112,7 +113,7 @@
             // 
             lblTongThu.AutoSize = true;
             lblTongThu.BackColor = SystemColors.ButtonHighlight;
-            lblTongThu.Location = new Point(388, 422);
+            lblTongThu.Location = new Point(393, 425);
             lblTongThu.Name = "lblTongThu";
             lblTongThu.Size = new Size(139, 23);
             lblTongThu.TabIndex = 4;
@@ -124,10 +125,10 @@
             dgvBaoCao.BackgroundColor = Color.White;
             dgvBaoCao.BorderStyle = BorderStyle.Fixed3D;
             dgvBaoCao.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBaoCao.Location = new Point(0, 147);
+            dgvBaoCao.Location = new Point(-2, 137);
             dgvBaoCao.Name = "dgvBaoCao";
             dgvBaoCao.RowHeadersWidth = 51;
-            dgvBaoCao.Size = new Size(1031, 260);
+            dgvBaoCao.Size = new Size(1031, 253);
             dgvBaoCao.TabIndex = 5;
             dgvBaoCao.CellContentClick += dgvBaoCao_CellContentClick;
             // 
@@ -136,7 +137,7 @@
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.bao_cao;
-            ClientSize = new Size(1031, 486);
+            ClientSize = new Size(1030, 486);
             Controls.Add(dgvBaoCao);
             Controls.Add(lblTongThu);
             Controls.Add(lblTongChi);
